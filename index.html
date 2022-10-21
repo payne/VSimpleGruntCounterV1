@@ -48,11 +48,13 @@
       function stopVideo() {
         player.stopVideo();
       }
+      let totalGrunts=0;
       function logGruntTime() {
         const gruntTime = player.getCurrentTime();
-        console.log(`logGruntTime at ${gruntTime}`);
+        totalGrunts += 1;
+        console.log(`logGruntTime # ${totalGrunts} at ${gruntTime}`);
         let txtArea = document.getElementById("grunts");
-        txtArea.value += `Grunt at ${gruntTime} seconds` + '\r\n';
+        txtArea.value += `Grunt ${totalGrunts} at ${gruntTime} seconds` + '\r\n';
       }
     </script>
     <button onclick="logGruntTime()">log grunt</button>
