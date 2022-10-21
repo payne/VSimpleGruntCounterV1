@@ -51,8 +51,11 @@
       function logGruntTime() {
         const gruntTime = player.getCurrentTime();
         console.log(`logGruntTime at ${gruntTime}`);
+        let txtArea = document.getElementById("grunts");
+        txtArea.value += `Grunt at ${gruntTime} seconds` + '\r\n';
       }
     </script>
     <button onclick="logGruntTime()">log grunt</button>
+    <TEXTAREA ROWS=30 COLS=40 id="grunts"></TEXTAREA>
   </body>
 </html>
